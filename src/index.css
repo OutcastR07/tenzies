@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  background: #E5E5E5;
   font-family: 'Karla', sans-serif;
 }
 
@@ -9,7 +8,6 @@ body {
   width: 360px;
   height: 379px;
   margin: 100px 450px;
-  background-color: #0B2434;
 }
 
 main {
@@ -25,6 +23,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  border: solid 10px #0B2434;
 }
 
 .dice-container {
@@ -32,6 +31,19 @@ main {
   display: grid;
   grid-template: auto auto /repeat(5, 1fr);
   gap: 20px;
+}
+
+.title {
+  background-color: #F5F5F5;
+  margin-bottom: 0;
+  margin-top: -10px;
+}
+
+.instructions {
+  background-color: #F5F5F5;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: smaller;
 }
 
 .die-face {
@@ -43,11 +55,9 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: #FFFFFF;
 }
 
 .die-num {
-  background: #FFFFFF;
   font-size: 2rem;
 }
 
@@ -61,10 +71,13 @@ main {
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  margin-top: 12px;
 }
 
 .roll-btn:active {
-  background-color: rgb(237, 83, 83);
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.roll-dice:focus {
+  outline: none;
 }
